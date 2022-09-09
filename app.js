@@ -2,6 +2,7 @@ let N = 9
 let submission = Array(N).fill().map(() => Array(N).fill(0));
 const puzzleBoard = $('#puzzle')
 
+
 $(document).ready(function(){
     for (let i = 0; i < 81; i++){
         if (
@@ -33,6 +34,21 @@ $(document).ready(function(){
                 count++
             })
     }
+    inputs
+        .on({
+            mouseenter: function(){
+                $(this).addClass('green')
+            },
+            mouseleave: function(){
+                $(this).removeClass('green')
+            },
+            focus: function(){
+                $(this).addClass('yellow')
+            },
+            blur: function(){
+                $(this).removeClass('yellow')
+            }
+        })
 
     let isSafe = function(submission, row, col, num){
         for (let x = 0; x < N; x++){
@@ -95,8 +111,10 @@ $(document).ready(function(){
                 $(this).val(submission[Math.floor(count/N)][count%N])
                 count++
             })
+            $('.message').text('Puzzled Solved')
         }
     }
 
-    $('#submitButton').on('click', solve)
+    $('#submitButton')
+        .on('click', solve)
 })
