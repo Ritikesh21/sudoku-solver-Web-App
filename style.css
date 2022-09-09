@@ -1,0 +1,32 @@
+#puzzle {
+    margin: auto;
+    margin-top: 10px;
+    width: 360px;
+}
+
+#heading {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.input {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+.changeBg {
+    background-color: grey;
+}
+
+#submitButton {
+    margin: auto;
+    width: 100px;
+}
