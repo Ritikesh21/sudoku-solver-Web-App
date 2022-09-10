@@ -41,7 +41,7 @@
     background-color: darkgoldenrod;
 }
 
-#submitButton {
+#submitButton, #resetButton {
     margin: auto;
     width: 100px;
 }

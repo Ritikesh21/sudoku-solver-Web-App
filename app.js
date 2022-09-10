@@ -117,4 +117,12 @@ $(document).ready(function(){
 
     $('#submitButton')
         .on('click', solve)
+    
+    $('#resetButton')
+        .on('click', function(){
+            inputs.each(function(){
+                $(this).val('')
+                $('.message').text('')
+            })
+        })
 })
